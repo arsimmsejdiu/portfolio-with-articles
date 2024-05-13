@@ -22,7 +22,7 @@ From a Client Device, open Local Policy Editor. Browse to Computer Configuration
 
 Expand the __Applocker__> Right click in Executable Rules > start creating your rules
 
-![AppLock Image guide!](https://en.wikipedia.org/wiki/The_Milagro_Beanfield_War_%28novel%29)
+![AppLock Image guide!](/tech-images/applock-policy-with-intune/applocker-localpolicyeditor.png)
 
 The above only shows 1 rule created. This means nothing else will be allowed to run. 
 I recommend you create atleast 2 publisher rules along the 'default' created rules. One for Microsoft and one for the hardware manufacturer of your devices.
@@ -47,7 +47,7 @@ In a case I worked on, duplicated 'Nodes' were mistakenly placed and not detecte
 This resulted in instabilities when 'allowing' or 'blocking' some files from running. 
 On a successful Policy test you will get a Blocked or Allowed result depending on the test. Testing the policy agains a specific __.exe__ for example:
 
-![Test-AppLockerPolicy Image guide!](https://en.wikipedia.org/wiki/The_Milagro_Beanfield_War_%28novel%29)
+![Test-AppLockerPolicy Image guide!](/tech-images/applock-policy-with-intune/Applocker_testxml_success_allow.png)
 
 Multiple test scenarios are possible. See full documentation and more examples here:
 
@@ -61,7 +61,7 @@ Ideally you would have 1 for each types posible.
 
 Remove the lines that are not needed leaving only what's within the 'RuleCollection Type' wanted. For example if an __EXE__ rule is wanted, do as shown bellow:
 
-![AppLockerPolicy yaml file Image guide!](https://en.wikipedia.org/wiki/The_Milagro_Beanfield_War_%28novel%29)
+![AppLockerPolicy yaml file Image guide!](/tech-images/applock-policy-with-intune/applocker-localpolicyeditor_exe.png)
 
 > Follow the same logic when creating your MSI, Script or APPX rules.
 
@@ -73,7 +73,7 @@ From the shown blades, select Devices > Configuration Profiles > Create Profile 
 
 Give a name to your profile: __Win10_Applocker__ and click Next > Click Add In the OMA-URI Settings
 
-![Miccrosoft endpoint manager Image guide!](https://en.wikipedia.org/wiki/The_Milagro_Beanfield_War_%28novel%29)
+![Miccrosoft endpoint manager Image guide!](/tech-images/applock-policy-with-intune/Intune_Applocker_Policy_EXE.png)
 
 Feel free to add more 'Configuration Settings' for other __Applocker__ items. 
 You can also split each Setting in different 'Configuration Profiles' if they are supposed to target different groups. 
@@ -86,7 +86,7 @@ Save > Assign your policy to targeted AAD Group.
 As mentionned above always test the policy on Dev/Test devices before proceeding with next 'assignment waves'. 
 When the policy is assigned and applied to your device AppLocker events will be logged in Event Viewer:
 
-![Event Viewer Image guide!](https://en.wikipedia.org/wiki/The_Milagro_Beanfield_War_%28novel%29)
+![Event Viewer Image guide!](/tech-images/applock-policy-with-intune/Blog_Applocker_2023_img1.jpg)
 
 ## Troubleshoot Duplicat Nodes in your XML
 
