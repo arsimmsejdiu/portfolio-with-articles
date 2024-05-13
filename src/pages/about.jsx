@@ -15,7 +15,7 @@ export default function About() {
   return (
     <>
       <NextSeo
-        title="leoel"
+        title="About - Leutrim Olluri"
         description={siteMeta.description}
         canonical="https://brian.dev/about"
         openGraph={{

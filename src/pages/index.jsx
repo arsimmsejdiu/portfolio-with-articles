@@ -150,7 +150,7 @@ export default function Home({ articles }) {
   return (
     <>
       <NextSeo
-        title="leoel"
+        title="Home - Leutrim Olluri"
         description={siteMeta.description}
         canonical="https://lableoel.com"
         openGraph={{
